@@ -56,15 +56,27 @@ class DataListVC: UIViewController , UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: UITableViewCellStyle.value1, reuseIdentifier: "Cell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "DataListCell") as! DataListCell
+        
+        //(style: UITableViewCellStyle.value1, reuseIdentifier: "DataListCell")
         let obj = arrList[indexPath.row]
         
-        cell.textLabel?.text = "\(obj.value(forKey: "name") ?? "")"
-        cell.detailTextLabel?.text = "\(obj.value(forKey: "contact") ?? "")"
+        cell.lblName?.text = "\(obj.value(forKey: "name") ?? "")"
+        // cell.detailTextLabel?.text = "\(obj.value(forKey: "contact") ?? "")"
         if let data = obj.value(forKey: "image") as? Data {
-            cell.imageView?.image = UIImage(data: data)
+            cell.imgImage.image = UIImage(data: data)
         }
+        cell.btnSelect.tag = indexPath.row
+        cell.btnSelect.addTarget(self, action:  #selector(self.actionSelectInfo(bnt:)) , for: .touchUpInside)
         return cell
+    }
+    
+    @objc func actionSelectInfo(bnt:UIButton)  {
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "InfoVC") as! InfoVC
+        vc.dict = arrList[bnt.tag]
+        
+        self.navigationController?.pushViewController(vc, animated: true)
+
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04CA690C229B014900F5DC59 /* InfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04CA690B229B014900F5DC59 /* InfoVC.swift */; };
 		04F0100A229317FF00B1CBA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04F01008229317FF00B1CBA8 /* Main.storyboard */; };
 		04F0100D229317FF00B1CBA8 /* MYDemo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 04F0100B229317FF00B1CBA8 /* MYDemo.xcdatamodeld */; };
 		04F0100F229317FF00B1CBA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F0100E229317FF00B1CBA8 /* Assets.xcassets */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04CA690B229B014900F5DC59 /* InfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoVC.swift; sourceTree = "<group>"; };
 		04F01001229317FF00B1CBA8 /* MYDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MYDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04F01009229317FF00B1CBA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04F0100C229317FF00B1CBA8 /* MYDemo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MYDemo.xcdatamodel; sourceTree = "<group>"; };
@@ -85,6 +87,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04CA690A229AF8EE00F5DC59 /* InfoVC */ = {
+			isa = PBXGroup;
+			children = (
+				04CA690B229B014900F5DC59 /* InfoVC.swift */,
+			);
+			path = InfoVC;
+			sourceTree = "<group>";
+		};
 		04F00FF8229317FF00B1CBA8 = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +150,7 @@
 		04F010352293186600B1CBA8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				04CA690A229AF8EE00F5DC59 /* InfoVC */,
 				04F0103A229318EA00B1CBA8 /* AddNewVC */,
 				04F0103B229318EB00B1CBA8 /* DataListVC */,
 				04F01039229318EA00B1CBA8 /* UpdateVC */,
@@ -327,6 +338,7 @@
 				04F0103F2293191800B1CBA8 /* UpdateVC.swift in Sources */,
 				04F0103D2293190400B1CBA8 /* DataListVC.swift in Sources */,
 				04F010412293193700B1CBA8 /* AddNewVC.swift in Sources */,
+				04CA690C229B014900F5DC59 /* InfoVC.swift in Sources */,
 				04F0100D229317FF00B1CBA8 /* MYDemo.xcdatamodeld in Sources */,
 				04F01043229319EE00B1CBA8 /* DataListCell.swift in Sources */,
 			);

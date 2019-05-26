@@ -10,6 +10,11 @@ import UIKit
 
 class DataListCell: UITableViewCell {
 
+    @IBOutlet var btnSelect: UIButton!
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var imgImage: UIImageView!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
